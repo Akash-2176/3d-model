@@ -1,0 +1,32 @@
+#root {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: black; /* Black color behind the background image */
+  overflow: hidden; /* Ensures no overflow issues */ /* To enable absolute positioning of child elements */
+}
+
+.background {
+  position: absolute;
+  top: 5%; /* Creates equal margin */
+  left: 5%; /* Creates equal margin */
+  width: 90%; /* Adjusts width to leave margin */
+  height: 90%; /* Adjusts height to leave margin */
+  background-image: url('./assets/grey.jpg'); /* Replace with your actual image path */
+  background-size: cover; /* Ensures the image scales proportionally */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0; /* Ensures it's below the 3D canvas */
+}
+
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensures it's above the background */
+  display: flex; /* Use flexbox to center the 3D model */
+  justify-content: center; /* Horizontally center the 3D model */
+  align-items: center; /* Vertically center the 3D model */
+}
